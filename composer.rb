@@ -875,7 +875,7 @@ unless prefer :database, 'default'
   gsub_file 'Gemfile', /gem 'sqlite3'\n/, '' unless prefer :database, 'sqlite'
 end
 if rails_4?
-  add_gem 'mongoid', '~> 4', github: 'mongoid/mongoid' if prefer :orm, 'mongoid'
+  add_gem 'mongoid', github: 'mongoid/mongoid' if prefer :orm, 'mongoid'
 else
   add_gem 'mongoid' if prefer :orm, 'mongoid'
 end
